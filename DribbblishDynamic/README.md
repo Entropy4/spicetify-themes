@@ -1,53 +1,24 @@
-# Dribbblish
-
+# DribbblishDynamic
+This is a tweaked version of Dribbblish theme. The main difference is that the highligh color is dynamic, ie. it will match the current album art colours.
 ## Screenshots
-#### Base
-![demo1](./base.png)
-
-#### White
-![demo2](./white.png)
-
 #### Dark
-![demo3](./dark.png)
-
-#### Dracula
-![demo4](./dracula.png)
-
-#### Gruvbox
-![demoGruvbox](./gruvbox.png)
-
-#### Nord-Dark
-![demo5](./nord-dark.png)
-
-#### Nord-Light
-![demo6](./nord-light.png)
-
-#### Horizon
-![demoHorizon](./horizon.png)
-
-#### Samouraï
-![demoSamourai](./samourai.png)
-
-#### Beach-Sunset
-![demo7](./beach-sunset.png)
-
-#### Purple
-![demo8](./purple.png)
+![demo-dark](./color-match-bg.gif)
+#### White
+![demo-white](./white.png)
 
 ## More
 Requires spicetify-cli **v0.9.9 or newer**.
 
 ### How to install
-
 Run these command:
 
 #### Linux and MacOS:
 In **Bash**:
 ```bash
-cd "$(dirname "$(spicetify -c)")/Themes/Dribbblish"
-cp dribbblish.js ../../Extensions
-spicetify config extensions dribbblish.js
-spicetify config current_theme Dribbblish color_scheme base
+cd "$(dirname "$(spicetify -c)")/Themes/DribbblishDynamic"
+cp dribbblish-dynamic.js ../../Extensions
+spicetify config extensions dribbblish-dynamic.js
+spicetify config current_theme DribbblishDynamic color_scheme dark
 spicetify config inject_css 1 replace_colors 1 overwrite_assets 1
 spicetify apply
 ```
@@ -55,10 +26,10 @@ spicetify apply
 #### Windows
 In **Powershell**:
 ```powershell
-cd "$(spicetify -c | Split-Path)\Themes\Dribbblish"
-Copy-Item dribbblish.js ..\..\Extensions
-spicetify config extensions dribbblish.js
-spicetify config current_theme Dribbblish color_scheme base
+cd "$(spicetify -c | Split-Path)\Themes\DribbblishDynamic"
+Copy-Item dribbblish-dynamic.js ..\..\Extensions
+spicetify config extensions dribbblish-dynamic.js
+spicetify config current_theme DribbblishDynamic color_scheme dark
 spicetify config inject_css 1 replace_colors 1 overwrite_assets 1
 spicetify apply
 ```
@@ -74,7 +45,7 @@ Moreover, by default, Spotify adjusted sidebar items and profile menu icon to st
 ![nocontrol](https://i.imgur.com/qdZyv1t.png)
 
 ### Color Schemes
-There are 9 color schemes you can choose: `base`, `white`, `dark`, `dracula`, `gruvbox`, `nord-dark`, `nord-light`, `horizon`, `samourai`, `purple`. Change scheme with commands:
+There are 2 color schemes you can choose: `white`, `dark`. Change scheme with commands:
 ```
 spicetify config color_scheme <scheme name>
 spicetify apply
@@ -85,7 +56,7 @@ spicetify apply
 Remove the dribbblish script with the following commands 
 
 ```
-spicetify config extensions dribbblish.js-
+spicetify config extensions dribbblish-dynamic.js-
 spicetify apply
 ```
 
@@ -113,3 +84,5 @@ These keys are used in the `colors.ini` file.
 |`miscellaneous_bg`| The background color of toolips ("You're offline" etc)|
 |`miscellaneous_hover_bg`| Hover Color for the Tooltips|
 |`preserve_1`| Misc text colors|
+
+Shoutout to @khanhas for the original Dribbblish theme!
